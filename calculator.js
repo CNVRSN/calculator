@@ -54,6 +54,7 @@ class Calculator {
         this.currentOperand = computation
         this.operation = undefined
         this.previousOperand = ''
+        this.currentOperand = ''
     }
 
     getDisplayNumber(number) {
