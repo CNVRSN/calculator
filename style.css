@@ -1,56 +1,15 @@
-@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
 
-*, *::before, *::after {
+* *::before, *::after {
     box-sizing: border-box;
-    font-family: Syne, sans-serif;
-    font-weight: bold;
+    font-family: "Space Grotesk", sans-serif;
+    font-weight: 300;
 }
 
 body {
+    padding: 0;
     margin: 0;
-    padding: 0;
-    background-image: linear-gradient(to right, #00aaff, #00ff6c);
-}
-
-.container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 64px;
-    max-width: 1200px;
-    margin: auto;
-}
-
-header {
-    font-size: 72px;
-}
-
-header > h1 {
-    margin: 32px 0 0 0;
-    padding: 0;
-    text-align: center;
-}
-
-.display {
-    grid-column: 1 / -1;
-    background-color: rgba(0, 0, 0, .75);
-    display: flex;
-    align-items: flex-end;
-    justify-content: space-around;
-    flex-direction: column;
-    padding: 12px;
-    word-wrap: break-word;
-    word-break: break-all;
-}
-
-.display .previous-operand {
-    color: rgba(255, 255, 255, .75);
-}
-
-.display .current-operand {
-    color: white;
-    font-size: 72px;
+    background: linear-gradient(to right, #00aaff, #00ff6c);
 }
 
 .calculator-grid {
@@ -64,14 +23,38 @@ header > h1 {
 
 .calculator-grid > button {
     cursor: pointer;
+    font-size: 2rem;
+    border: 1px solid white;
+    outline: none;
     background-color: rgba(255, 255, 255, .75);
-    font-size: 36px;
-}   
+}
 
-.calculator-grid > button:hover {
+.calculator-grid > button {
     background-color: rgba(255, 255, 255, .9);
 }
 
 .span-two {
     grid-column: span 2;
+}
+
+.output {
+    grid-column: 1 / -1;
+    background-color: rgba(0, 0, 0, .75);
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-around;
+    flex-direction: column;
+    padding: 12px;
+    word-wrap: break-word;
+    word-break: break-all;
+}
+
+.output .previous-operand {
+    color: rgba(255, 255, 255, .75);
+    font-size: 1.5rem;
+}
+
+.output .current-operand {
+    color: white;
+    font-size: 2.5rem;
 }
